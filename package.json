@@ -1,0 +1,20 @@
+{
+  "name": "goodments-prototype",
+  "version": "0.1.0",
+  "description": "A proposition test website for the Goodments product offering.",
+  "private": true,
+  "scripts": {
+    "install": "gem install jekyll",
+    "start": "jekyll serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ustwo/goodments-prototype.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ustwo/goodments-prototype/issues"
+  },
+  "homepage": "https://github.com/ustwo/goodments-prototype#readme"
+}
