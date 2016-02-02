@@ -1,23 +1,37 @@
 ---
 layout: default
+body-class: home
 ---
 
-<div class="home">
+  <section class="intro">
 
-  <h1 class="page-heading">Posts are here yp</h1>
+    <h1 class="page-heading">{{ site.tagline }}</h1>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+    <p class="page-intro">Latest research suggests better investments are made when you consider not only a company’s <strong>financial performance</strong>, but also their <strong>environmental</strong>, <strong>social</strong> and <strong>governance</strong> factors.  Join us, make smarter investments and do good!</p>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+  </section>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  <section class="overview">
 
-</div>
+    <article>
+      <img src="/images/icon_esgf.svg" alt="F+ESG">
+      <p>F+ESG is a better indicator of a company’s vision and long-term stability than financial performance alone.</p>
+    </article>
+
+    <article>
+      <img src="/images/icon_profile.svg" alt="Profile builder">
+      <p>Discover investments that match your value profile with our matchmaking system</p>
+    </article>
+
+    <article>
+      <img src="/images/icon_community.svg" alt="Community">
+      <p>Join a community of active investors sharing ratings, reviews and tips on investing</p>
+    </article>
+    
+  </section>
+
+  <section class="cta">
+    
+    <a href="{{ "/feed.xml" | prepend: site.baseurl }}" class="btn">Join the beta</a>
+
+  </section>

@@ -1,0 +1,48 @@
+/**
+ * Intro
+ */
+.intro {
+    max-width: 50%;
+    p {
+        padding: 0 $spacing-unit * 2;
+    }
+}
+
+
+/**
+ * Overview
+ */
+.overview {
+    display: flex;
+    article {
+    	flex-basis: calc(100%/3);
+        display: block;
+        margin: 0 $spacing-unit;
+        text-align: center;
+    }
+    img {
+    	display: inline-block;
+        max-width: none;
+        padding: 0 0 $spacing-unit 0;
+    }
+}
+
+
+/**
+ * Home
+ */
+ .home {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+ }
+
+
+
+/**
+ * Header
+ */
+.site-header {
+	position: absolute;
+	top: 0; left: 0; right: 0;
+}

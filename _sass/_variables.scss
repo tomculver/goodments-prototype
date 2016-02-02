@@ -1,22 +1,25 @@
 // Our variables
-$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
+$base-font-family: "geomanist-regular", Verdana, Geneva, sans-serif;
+$heading-font-family: "geomanist-medium", Verdana, Geneva, sans-serif;
+$base-font-size:   14px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
+$large-font-size:  $base-font-size * 1.285;
 $base-line-height: 1.5;
 
-$spacing-unit:     30px;
+$spacing-unit:     24px;
+$border-radius:    4px;
 
-$text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
+$text-color:       #000;
+$background-color: #3E61DF;
+$brand-color:      #FFF;
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
 // Width of the content area
-$content-width:    800px;
+$content-width:    #{1024px / $base-font-size}em;
 
-$on-palm:          600px;
-$on-laptop:        800px;
+// Media queries
+$tablet: "screen and (min-width: 768px)";

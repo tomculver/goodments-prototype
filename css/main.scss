@@ -6,7 +6,11 @@
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
 	"normalize",
+	"fonts",
     "variables",
-    "base",
-    "layout"
+    "base"
 ;
+
+@media #{$tablet} {
+	@import "768_up";
+}
