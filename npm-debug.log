@@ -11,10 +11,10 @@
 8 verbose lifecycle goodments-prototype@0.1.0~start: unsafe-perm in lifecycle true
 9 verbose lifecycle goodments-prototype@0.1.0~start: PATH: /Users/petragulicher/.npm_packages/lib/node_modules/npm/bin/node-gyp-bin:/Users/petragulicher/Development/goodments-prototype/node_modules/.bin:/Users/petragulicher/Development/android-sdk-macosx/platform-tools:/Users/petragulicher/Development/android-sdk-macosx/tools:/usr/local/bin:/usr/local/sbin:/Users/petragulicher/.rbenv/shims:/Users/petragulicher/.rbenv/bin:/Users/petragulicher/.npm_packages/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/petragulicher/.rvm/bin:/Users/petragulicher/.rvm/bin
 10 verbose lifecycle goodments-prototype@0.1.0~start: CWD: /Users/petragulicher/Development/goodments-prototype
-11 silly lifecycle goodments-prototype@0.1.0~start: Args: [ '-c', 'cd build && jekyll serve' ]
+11 silly lifecycle goodments-prototype@0.1.0~start: Args: [ '-c', 'jekyll serve' ]
 12 silly lifecycle goodments-prototype@0.1.0~start: Returned: code: 1  signal: null
 13 info lifecycle goodments-prototype@0.1.0~start: Failed to exec start script
-14 verbose stack Error: goodments-prototype@0.1.0 start: `cd build && jekyll serve`
+14 verbose stack Error: goodments-prototype@0.1.0 start: `jekyll serve`
 14 verbose stack Exit status 1
 14 verbose stack     at EventEmitter.<anonymous> (/Users/petragulicher/.npm_packages/lib/node_modules/npm/lib/utils/lifecycle.js:233:16)
 14 verbose stack     at emitTwo (events.js:87:13)
@@ -31,13 +31,13 @@
 19 error node v4.1.2
 20 error npm  v3.3.8
 21 error code ELIFECYCLE
-22 error goodments-prototype@0.1.0 start: `cd build && jekyll serve`
+22 error goodments-prototype@0.1.0 start: `jekyll serve`
 22 error Exit status 1
-23 error Failed at the goodments-prototype@0.1.0 start script 'cd build && jekyll serve'.
+23 error Failed at the goodments-prototype@0.1.0 start script 'jekyll serve'.
 23 error This is most likely a problem with the goodments-prototype package,
 23 error not with npm itself.
 23 error Tell the author that this fails on your system:
-23 error     cd build && jekyll serve
+23 error     jekyll serve
 23 error You can get their info via:
 23 error     npm owner ls goodments-prototype
 23 error There is likely additional logging output above.

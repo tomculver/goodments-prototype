@@ -4,7 +4,7 @@
   "description": "A proposition test website for the Goodments product offering.",
   "private": true,
   "scripts": {
-    "install": "gem install jekyll",
+    "install": "bundle",
     "start": "jekyll serve"
   },
   "repository": {

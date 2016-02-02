@@ -1,8 +1,18 @@
 ---
 ---
-{% include js/more.js %}
 
-(function() {
+var Forms = require('./js/app/forms.js');
+var Modals = require('./js/app/modals.js');
+
+Forms.init();
+Modals.init();
+
+// (function(document) {
+
+// }(document));
+
+
+/*
 
 var params = window.location.search.length ? window.location.search.replace(/(^\?)/,'').split('&').map(function(i) {
 		var node = {};
@@ -28,6 +38,12 @@ var bizzos = [{"companyid":4493447,"ticker":"CAB","s":7,"e":6,"companyname":"Cab
 
 console.log('user is: ', JSON.stringify(user));
 
+function diff(a,b) {
+	return Math.abs(a-b);
+}
+
+bizzos.forEach(function(bizzo) {
+});
 /*
 for each bizzo
 	compare e, s & g with user's e, s & g
@@ -36,14 +52,6 @@ for each bizzo
 
 */
 
-function diff(a,b) {
-	return Math.abs(a-b);
-}
-
-bizzos.forEach(function(bizzo) {
-});
-
-}());
 
 
 

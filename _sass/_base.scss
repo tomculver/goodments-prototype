@@ -18,6 +18,8 @@ body {
     color: $text-color;
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     -webkit-font-feature-settings: "kern" 1;
     -moz-font-feature-settings: "kern" 1;
     -o-font-feature-settings: "kern" 1;
@@ -90,7 +92,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: $heading-font-family;
     font-weight: $base-font-weight;
 }
-h1 {
+h1, h2 {
     font-size: #{36px / $base-font-size}em;
 }
 
@@ -102,10 +104,6 @@ h1 {
 a {
     color: $brand-color;
     text-decoration: none;
-
-    &:visited {
-        color: $brand-color;
-    }
 
     &:hover {
         color: $text-color;
@@ -125,12 +123,14 @@ a {
     background-color: $brand-color;
     text-align: center;
     color: $background-color;
-    transition: all .3s ease;
+    transition: all .2s ease;
     opacity: 1;
-    transform: none;
+    transform: translate(0, 0);
+    box-shadow: none;
     &:hover {
-        opacity: 0.9;
-        transform: translateY(-2px);
+        opacity: 0.95;
+        transform: translate(-2px, -2px);
+        box-shadow: 2px 2px 2px rgba($text-color, 0.2);
         text-decoration: none;
         color: $background-color;
     }
@@ -224,4 +224,122 @@ a {
 
 
 
+/**
+ * Modals
+ */
+.modal {
+  display: none;
+}
 
+.modal-init .modal-hidden {
+    display: none;
+}
+
+.modal-init .modal {
+  display: block;
+  position: fixed;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.2s, z-index 0s 0.2s;
+  text-align: center;
+  overflow: hidden;
+  overflow-y: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.modal-init .modal > * {
+  display: inline-block;
+  white-space: normal;
+}
+
+.modal-init .modal:before {
+  display: inline-block;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  vertical-align: middle;
+  content: "";
+}
+
+.modal-init.modal-visible .modal {
+  z-index: 99;
+  opacity: 1;
+  transition: opacity 0.2s;
+}
+
+.modal-inner {
+  position: relative;
+  overflow: hidden;
+  width: 90%;
+  max-height: 90%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: $brand-color;
+  border-radius: $border-radius;
+  padding: $spacing-unit;
+  text-align: center;
+  z-index: -1;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.2s, transform 0.2s, z-index 0s 0.2s;
+}
+.modal-visible .modal-inner {
+  z-index: 100;
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.2s, transform 0.2s;
+}
+.modal-visible .modal-content {
+    img {
+        margin: $spacing-unit;
+    }
+}
+
+a[rel="modal:close"] {
+  position: absolute;
+  z-index: 2;
+  right: $spacing-unit;
+  top: $spacing-unit;
+  width: 16px; height: 16px;
+  background: transparent url('/images/icon_close.svg') center center / 100% auto no-repeat;
+  cursor: pointer;
+  color: transparent;
+}
+
+/**
+ * Forms
+ */
+div[role="group"] {
+    display: flex;
+    width: 75%;
+    margin: $spacing-unit auto;
+    padding: 0;
+    border: 1px solid $highlight-color;
+    border-radius: $border-radius;
+    overflow: hidden;
+    input[type="email"] {
+        flex: 1;
+        border: none;
+        padding: 0.5em 1em 0.55em;
+        &:focus {
+            outline: none;
+        }
+    }
+    input[type="submit"] {
+        border: none;
+        padding: 0.5em 1em 0.55em;
+        background-color: $highlight-color;
+        font-size: $large-font-size;
+        color: $brand-color;
+        &:focus {
+            outline: none;
+        }
+    }
+}
