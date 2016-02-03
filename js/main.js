@@ -31,7 +31,7 @@ var Forms = {
 	submitForm: function() {
 		var url = this.submit.dataset.href + '?email=' + this.input.value;
 		var params = this.getParams();
-		if (params[0] && params[0].hasOwnProperty('results')) {
+		if (params && params[0].hasOwnProperty('results')) {
 			url += '&results=true';
 		}
 		window.location = url;
