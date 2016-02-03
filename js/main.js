@@ -46,12 +46,11 @@ Forms.init();
 var Modals = {
 	init: function() {
 
-		var modalWidth = $(window).width() > 768 ? '40%' : '90%';
-
 		$('a[rel="modal:open"]').colorbox({
 			inline: true,
 			href: '#signup',
-			width: modalWidth
+			width: '90%',
+			maxWidth: '425px'
 		});
 
 	}
