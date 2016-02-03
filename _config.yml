@@ -21,16 +21,7 @@ twitter_username: jekyllrb
 # Build settings
 markdown: kramdown
 
-exclude: [js/vendor]
+exclude: []
 
-# _config.yaml
-browserify:
-
-  # target exts to convert
-  exts: [".js"]
-
-  # use installed 'browserify'
-  command: "browserify -"
-
-  # execute `npm install` on initialize if true
-  npm_install: false
+gems:
+ - jekyll-coffeescript
