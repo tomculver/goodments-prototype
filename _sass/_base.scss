@@ -127,6 +127,9 @@ a {
     opacity: 1;
     transform: translate(0, 0);
     box-shadow: none;
+    &:focus {
+      outline: none;
+    }
     &:hover {
         opacity: 0.95;
         transform: translate(-2px, -2px);
@@ -338,12 +341,15 @@ a[rel="modal:close"] {
   width: 90%;
   background: $brand-color;
   border-radius: $border-radius;
-  padding: $spacing-unit;
+  padding: $spacing-unit * 2 $spacing-unit 0;
   text-align: center;
+  h2 {
+    color: $contrast-color;
+  }
 }
 #cboxOverlay {
   opacity: 1;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba($contrast-color, 0.9);
 }
 #cboxClose {
   position: absolute;

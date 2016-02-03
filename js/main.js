@@ -46,7 +46,7 @@ Forms.init();
 var Modals = {
 	init: function() {
 
-		var modalWidth = $(window).width() > 768 ? '50%' : '90%';
+		var modalWidth = $(window).width() > 768 ? '40%' : '90%';
 
 		$('a[rel="modal:open"]').colorbox({
 			inline: true,

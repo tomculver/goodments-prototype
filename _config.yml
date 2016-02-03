@@ -22,6 +22,3 @@ twitter_username: jekyllrb
 markdown: kramdown
 
 exclude: []
-
-gems:
- - jekyll-coffeescript
