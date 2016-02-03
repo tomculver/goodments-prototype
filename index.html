@@ -1,31 +1,47 @@
 ---
 layout: default
-body-class: home
+body-class: home landing-home
 ---
 
-  <section class="intro">
-    <h1 class="page-heading">{{ site.tagline }}</h1>
-    <p class="page-intro">Latest research suggests better investments are made when you consider not only a company’s <strong>financial performance</strong>, but also their <strong>environmental</strong>, <strong>social</strong> and <strong>governance</strong> factors.  Join us, make smarter investments and do good!</p>
-  </section>
+  <div class="landing">
 
-  <section class="overview">
-    <article>
-      <img src="{{ "/images/icon_esgf.svg" | prepend: site.baseurl }}" alt="F+ESG">
-      <p>F+ESG is a better indicator of a company’s vision and long-term stability than financial performance alone.</p>
-    </article>
-    <article>
-      <img src="{{ "/images/icon_profile.svg" | prepend: site.baseurl }}" alt="Profile builder">
-      <p>Discover investments that match your value profile with our matchmaking system</p>
-    </article>
-    <article>
-      <img src="{{ "/images/icon_community.svg" | prepend: site.baseurl }}" alt="Community">
-      <p>Join a community of active investors sharing ratings, reviews and tips on investing</p>
-    </article>
-  </section>
+    <section class="intro">
+      <h1 class="page-heading">{{ site.tagline }}</h1>
+      <p class="page-intro">Latest research suggests better investments are made when you consider not only a company’s <strong>financial performance</strong>, but also their <strong>environmental</strong>, <strong>social</strong> and <strong>governance</strong> factors.  Join us, make smarter investments and do good!</p>
+    </section>
 
-  <section class="cta">
-    <a href="#signup" class="btn" rel="modal:open">Join the beta</a>
-  </section>
+    <section class="overview">
+      <article>
+        <img src="{{ "/images/icon_esgf.svg" | prepend: site.baseurl }}" alt="F+ESG">
+        <p>F+ESG is a better indicator of a company’s vision and long-term stability than financial performance alone.</p>
+      </article>
+      <article>
+        <img src="{{ "/images/icon_profile.svg" | prepend: site.baseurl }}" alt="Profile builder">
+        <p>Discover investments that match your value profile with our matchmaking system</p>
+      </article>
+      <article>
+        <img src="{{ "/images/icon_community.svg" | prepend: site.baseurl }}" alt="Community">
+        <p>Join a community of active investors sharing ratings, reviews and tips on investing</p>
+      </article>
+    </section>
+
+    <section class="cta">
+      <a href="#signup" class="btn" rel="modal:open">Join the beta</a>
+    </section>
+
+  </div>
+
+  <div class="start-profile">
+
+    <section class="intro">
+      <img src="{{ "/images/icon_profile.png" | prepend: site.baseurl }}" alt="Profile">
+      <h1 class="page-heading">Create your profile now to help us develop Goodments and so you are ready for launch</h1>
+    </section>
+    <section class="cta">
+      <a href="https://tutorials.typeform.com/to/VmUtC9" class="btn" rel="profile">Create Profile</a>
+    </section>
+
+  </div>
 
   <div class="modal-hidden">
 
@@ -35,7 +51,7 @@ body-class: home
       <p>Get early access, news and be part<br />of our testing community</p>
       <div role="group">
         <input type="email" id="email" placeholder="email address" required class="signup-input" />
-        <input type="submit" value="Join" class="signup-submit" data-href="https://tutorials.typeform.com/to/VmUtC9" />
+        <input type="submit" value="Join" class="signup-submit" />
       </div>
     </section>
     

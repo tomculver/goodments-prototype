@@ -26,7 +26,7 @@ body {
     font-feature-settings: "kern" 1;
     font-kerning: normal;
     min-height: 100vh;
-    &.home {
+    &.landing-home {
         background-image: url('../images/bg@2x.jpg');
         background-size: cover;
     }
@@ -91,9 +91,11 @@ li {
 h1, h2, h3, h4, h5, h6 {
     font-family: $heading-font-family;
     font-weight: $base-font-weight;
+    line-height: $small-line-height;
 }
 h1, h2 {
     font-size: #{36px / $base-font-size}em;
+    margin-top: 0.25em;
 }
 
 
@@ -394,3 +396,8 @@ div[role="group"] {
         }
     }
 }
+
+.start-profile {
+  display: none;
+}
+

@@ -8,6 +8,9 @@
  */
 var Forms = {
 	init: function() {
+
+		$('.start-profile').hide();
+
 		this.input = document.querySelector('.signup-input');
 		this.submit = document.querySelector('.signup-submit');
 
@@ -29,12 +32,17 @@ var Forms = {
 		}) : null;
 	},
 	submitForm: function() {
-		var url = this.submit.dataset.href + '?email=' + this.input.value;
+		var queryString = '?email=' + this.input.value;
 		var params = this.getParams();
 		if (params && params[0].hasOwnProperty('results')) {
-			url += '&results=true';
+			queryString += '&results=true';
 		}
-		window.location = url;
+		var profileLink = document.querySelector('a[rel="profile"]');
+		profileLink.href += queryString;
+		$.colorbox.close();
+		$('body').removeClass('landing-home');
+		$('.landing').hide();
+		$('.start-profile').show();
 	}
 };
 Forms.init();
