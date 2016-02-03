@@ -10,15 +10,15 @@ body-class: home
 
   <section class="overview">
     <article>
-      <img src="/images/icon_esgf.svg" alt="F+ESG">
+      <img src="{{ "/images/icon_esgf.svg" | prepend: site.baseurl }}" alt="F+ESG">
       <p>F+ESG is a better indicator of a company’s vision and long-term stability than financial performance alone.</p>
     </article>
     <article>
-      <img src="/images/icon_profile.svg" alt="Profile builder">
+      <img src="{{ "/images/icon_profile.svg" | prepend: site.baseurl }}" alt="Profile builder">
       <p>Discover investments that match your value profile with our matchmaking system</p>
     </article>
     <article>
-      <img src="/images/icon_community.svg" alt="Community">
+      <img src="{{ "/images/icon_community.svg" | prepend: site.baseurl }}" alt="Community">
       <p>Join a community of active investors sharing ratings, reviews and tips on investing</p>
     </article>
   </section>
@@ -28,7 +28,7 @@ body-class: home
   </section>
 
   <section id="signup" class="modal-hidden">
-    <img src="/images/icon_early-adopter.png" alt="Early Access">
+    <img src="{{ "/images/icon_early-adopter.png" | prepend: site.baseurl }}" alt="Early Access">
     <h2>Join the Beta</h2>
     <p>Get early access, news and be part of our testing community</p>
     <div role="group">

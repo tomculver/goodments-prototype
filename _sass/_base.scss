@@ -27,7 +27,7 @@ body {
     font-kerning: normal;
     min-height: 100vh;
     &.home {
-        background-image: url('/images/bg@2x.jpg');
+        background-image: url('../images/bg@2x.jpg');
         background-size: cover;
     }
 }
@@ -308,7 +308,7 @@ a[rel="modal:close"] {
   right: $spacing-unit;
   top: $spacing-unit;
   width: 16px; height: 16px;
-  background: transparent url('/images/icon_close.svg') center center / 100% auto no-repeat;
+  background: transparent url('../images/icon_close.svg') center center / 100% auto no-repeat;
   cursor: pointer;
   color: transparent;
 }
