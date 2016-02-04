@@ -486,6 +486,8 @@ div[role="group"] {
     align-items: center;
  }
  .company-img {
+    min-width: 79px;
+    min-height: 70px;
     max-width: calc(100%/6);
     margin: $spacing-unit $spacing-unit 0;
  }
