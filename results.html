@@ -8,11 +8,11 @@ body-class: detail
     <div class="wrapper sm profile">
         <img class="profile-img" src="{{ "/images/logo_profile-sm.png" | prepend: site.baseurl }}"  alt="Your profile">
         <span class="profile-email">name@company.com</span>
-        <ul class="scores-list btn-list">
-            <li>Financial <span>5</span></li>
-            <li>Environment <span>3</span></li>
-            <li>Social <span>4</span></li>
-            <li>Governance <span>3</span></li>
+        <ul class="scores-list">
+            <li rel="f">Financial <span>5</span></li>
+            <li rel="e">Environment <span>3</span></li>
+            <li rel="s">Social <span>4</span></li>
+            <li rel="g">Governance <span>3</span></li>
         </ul>
     </div>
 </section>
@@ -21,8 +21,28 @@ body-class: detail
     <div class="wrapper sm">
         <p><span>3</span> results ordered by closest match</p>
         <hr>
+        {% for company in site.data.companies %}
         <article class="company">
-            <h2>Origin Energy Limited</h2>
+            <div class="company-main">
+                <img class="company-img" src="{{ "/images/companies/" | prepend: site.baseurl }}{{ company.ticker }}{{ ".png" }}"  alt="{{ company.ticker }}">
+                <div class="company-details">
+                    <h3>{{ company.name }}</h3>
+                    <p>S&amp;P ASX 200: {{ company.ticker }} - </p>
+                </div>
+                <div class="company-cta">
+                    <a href="" class="btn btn-reverse">Buy</a>
+                </div>
+            </div>
+            <div class="company-footer">
+                <p><span>85%</span> profile match</p>
+                <ul class="scores-list">
+                    <li rel="f"><span>5</span></li>
+                    <li rel="e"><span>{{ company.e }}</span></li>
+                    <li rel="s"><span>{{ company.e }}</span></li>
+                    <li rel="g"><span>{{ company.e }}</span></li>
+                </ul>
+            </div>
         </article>
+        {% endfor %}
     </div>
 </section>

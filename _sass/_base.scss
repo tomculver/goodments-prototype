@@ -137,7 +137,7 @@ a {
     &:hover {
         opacity: 0.95;
         transform: translate(-2px, -2px);
-        box-shadow: 2px 2px 2px rgba($text-color, 0.2);
+        box-shadow: 2px 2px 2px $border-color;
         text-decoration: none;
         color: $background-color;
     }
@@ -151,6 +151,13 @@ a {
         margin-left: 0.5em;
         vertical-align: middle;
         font-size: $base-font-size;
+    }
+ }
+ .btn-reverse {
+    background-color: $highlight-color;
+    color: $brand-color;
+    &:hover {
+        color: $brand-color;
     }
  }
  .btn-list {
@@ -267,6 +274,9 @@ a {
  .sub-header {
     color: $brand-color;
     font-size: $small-font-size;
+    .scores-list li span {
+        font-family: $heading-font-family;
+    }
  }
 
 
@@ -422,6 +432,7 @@ div[role="group"] {
     .page-content {
         display: flex;
         flex-direction: column;
+        flex: 1;
     }
     .profile-results {
         flex: 1;
@@ -449,13 +460,80 @@ div[role="group"] {
 
 
 
+
+
+/**
+ * Companies
+ */
+ .company {
+    margin: 0 0 1rem;
+    box-shadow: 0 1px 1px 0 $border-color;
+    border-radius: $border-radius;
+    background-color: $brand-color;
+ }
+ .company-main {
+    display: flex;
+    align-items: center;
+ }
+ .company-img {
+    max-width: calc(100%/6);
+    margin: $spacing-unit $spacing-unit 0;
+ }
+ .company-details {
+    flex: 1;
+    h3 {
+        font-family: $base-font-family;
+        font-weight: $base-font-weight;
+        font-size: $large-font-size;
+        margin-bottom: 0.5em;
+    }
+    p {
+        font-size: $small-font-size;
+    }
+ }
+ .company-cta {
+    align-self:  flex-end;
+    padding-right: 1em;
+ }
+ .company-footer {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    border-top: 1px solid $border-color;
+    font-size: $small-font-size;
+    p {
+        flex: 1;
+    }
+ }
+
+
+
 /**
  * Scores list
  */
 .scores-list {
-    margin: 0.5em 0;
+    margin: 0;
     text-align: center;
+    display: flex;
+    width: 70%;
     span {
         display: block;
+    }
+    li {
+        flex: 1;
+        border-bottom: 2px solid transparent;
+        padding: 0.5em 0;
+        &[rel="f"] {
+            border-color: $mauve;
+        }
+        &[rel="e"] {
+            border-color: $lime;
+        }
+        &[rel="s"] {
+            border-color: $aqua;
+        }
+        &[rel="g"] {
+            border-color: $orange;
+        }
     }
 }

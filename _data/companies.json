@@ -1,0 +1,775 @@
+[
+    {
+        "name": "Fairfax Media Limited",
+        "id": 30402,
+        "exchange": "ASX",
+        "ticker": "FXJ",
+        "e": 5,
+        "s": 7,
+        "g": 5
+    },
+    {
+        "name": "Ansell Ltd.",
+        "id": 167945,
+        "exchange": "ASX",
+        "ticker": "ANN",
+        "e": 6,
+        "s": 6,
+        "g": 5
+    },
+    {
+        "name": "Alumina Ltd.",
+        "id": 191781,
+        "exchange": "ASX",
+        "ticker": "AWC",
+        "e": 6,
+        "s": 6,
+        "g": 6
+    },
+    {
+        "name": "BHP Billiton Ltd.",
+        "id": 256654,
+        "exchange": "ASX",
+        "ticker": "BHP",
+        "e": 6,
+        "s": 6,
+        "g": 6
+    },
+    {
+        "name": "Australia & New Zealand Banking Group Limited",
+        "id": 384998,
+        "exchange": "ASX",
+        "ticker": "ANZ",
+        "e": 5,
+        "s": 5,
+        "g": 6
+    },
+    {
+        "name": "Boral Ltd.",
+        "id": 392930,
+        "exchange": "ASX",
+        "ticker": "BLD",
+        "e": 6,
+        "s": 7,
+        "g": 6
+    },
+    {
+        "name": "Amcor Ltd.",
+        "id": 401715,
+        "exchange": "ASX",
+        "ticker": "AMC",
+        "e": 6,
+        "s": 7,
+        "g": 6
+    },
+    {
+        "name": "CSR Limited",
+        "id": 410066,
+        "exchange": "ASX",
+        "ticker": "CSR",
+        "e": 6,
+        "s": 7,
+        "g": 6
+    },
+    {
+        "name": "Cochlear Ltd.",
+        "id": 419113,
+        "exchange": "ASX",
+        "ticker": "COH",
+        "e": 6,
+        "s": 6,
+        "g": 5
+    },
+    {
+        "name": "Aristocrat Leisure Ltd.",
+        "id": 662734,
+        "exchange": "ASX",
+        "ticker": "ALL",
+        "e": 5,
+        "s": 6,
+        "g": 6
+    },
+    {
+        "name": "Coca-Cola Amatil Limited",
+        "id": 692765,
+        "exchange": "ASX",
+        "ticker": "CCL",
+        "e": 6,
+        "s": 6,
+        "g": 6
+    },
+    {
+        "name": "Computershare Ltd.",
+        "id": 744808,
+        "exchange": "ASX",
+        "ticker": "CPU",
+        "e": 5,
+        "s": 6,
+        "g": 5
+    },
+    {
+        "name": "Commonwealth Bank of Australia",
+        "id": 874262,
+        "exchange": "ASX",
+        "ticker": "CBA",
+        "e": 5,
+        "s": 5,
+        "g": 6
+    },
+    {
+        "name": "Beach Energy Limited",
+        "id": 874657,
+        "exchange": "ASX",
+        "ticker": "BPT",
+        "e": 5,
+        "s": 6,
+        "g": 6
+    },
+    {
+        "name": "AGL Energy Limited",
+        "id": 874736,
+        "exchange": "ASX",
+        "ticker": "AGL",
+        "e": 5,
+        "s": 7,
+        "g": 6
+    },
+    {
+        "name": "Bank of Queensland Ltd.",
+        "id": 874859,
+        "exchange": "ASX",
+        "ticker": "BOQ",
+        "e": 5,
+        "s": 5,
+        "g": 6
+    },
+    {
+        "name": "Energy Resources of Australia Ltd.",
+        "id": 874903,
+        "exchange": "ASX",
+        "ticker": "ERA",
+        "e": 5,
+        "s": 6,
+        "g": 6
+    },
+    {
+        "name": "ALS Limited",
+        "id": 875027,
+        "exchange": "ASX",
+        "ticker": "ALQ",
+        "e": 6,
+        "s": 7,
+        "g": 5
+    },
+    {
+        "name": "Adelaide Brighton Ltd.",
+        "id": 875415,
+        "exchange": "ASX",
+        "ticker": "ABC",
+        "e": 6,
+        "s": 7,
+        "g": 6
+    },
+    {
+        "name": "CIMIC Group Limited",
+        "id": 876903,
+        "exchange": "ASX",
+        "ticker": "CIM",
+        "e": 5,
+        "s": 7,
+        "g": 6
+    },
+    {
+        "name": "Goodman Group",
+        "id": 876923,
+        "exchange": "ASX",
+        "ticker": "GMG",
+        "e": 5,
+        "s": 5,
+        "g": 5
+    },
+    {
+        "name": "Australia Pacific Airports (Melbourne) Pty Limited",
+        "id": 22727840,
+        "e": 5,
+        "s": 6,
+        "g": 5
+    },
+    {
+        "name": "Australian Gas Networks Limited",
+        "id": 882780,
+        "e": 5,
+        "s": 7,
+        "g": 6
+    },
+    {
+        "name": "Caltex Australia Ltd.",
+        "id": 877088,
+        "exchange": "ASX",
+        "ticker": "CTX",
+        "e": 6,
+        "s": 7,
+        "g": 6
+    },
+    {
+        "name": "APN News & Media Ltd.",
+        "id": 877276,
+        "exchange": "ASX",
+        "ticker": "APN",
+        "e": 5,
+        "s": 7,
+        "g": 5
+    },
+    {
+        "name": "ARB Corporation Limited",
+        "id": 877447,
+        "exchange": "ASX",
+        "ticker": "ARB",
+        "e": 7,
+        "s": 6,
+        "g": 6
+    },
+    {
+        "name": "GPT Group",
+        "id": 877819,
+        "exchange": "ASX",
+        "ticker": "GPT",
+        "e": 5,
+        "s": 5,
+        "g": 5
+    },
+    {
+        "name": "Ausdrill Ltd.",
+        "id": 878590,
+        "exchange": "ASX",
+        "ticker": "ASL",
+        "e": 5,
+        "s": 7,
+        "g": 6
+    },
+    {
+        "name": "Bendigo and Adelaide Bank Limited.",
+        "id": 878891,
+        "exchange": "ASX",
+        "ticker": "BEN",
+        "e": 5,
+        "s": 5,
+        "g": 6
+    },
+    {
+        "name": "Energy World Corp. Ltd.",
+        "id": 878952,
+        "exchange": "ASX",
+        "ticker": "EWC",
+        "e": 5,
+        "s": 7,
+        "g": 6
+    },
+    {
+        "name": "Downer EDI Limited",
+        "id": 879131,
+        "exchange": "ASX",
+        "ticker": "DOW",
+        "e": 6,
+        "s": 7,
+        "g": 5
+    },
+    {
+        "name": "CSL Ltd.",
+        "id": 881503,
+        "exchange": "ASX",
+        "ticker": "CSL",
+        "e": 6,
+        "s": 6,
+        "g": 5
+    },
+    {
+        "name": "Aveo Group",
+        "id": 881891,
+        "exchange": "ASX",
+        "ticker": "AOG",
+        "e": 5,
+        "s": 5,
+        "g": 5
+    },
+    {
+        "name": "AMP Limited",
+        "id": 882775,
+        "exchange": "ASX",
+        "ticker": "AMP",
+        "e": 5,
+        "s": 6,
+        "g": 6
+    },
+    {
+        "name": "Future Generation Investment Fund Limited",
+        "id": 883163,
+        "exchange": "ASX",
+        "ticker": "FGX",
+        "e": 5,
+        "s": 6,
+        "g": 5
+    },
+    {
+        "name": "Ardent Leisure Group",
+        "id": 884372,
+        "exchange": "ASX",
+        "ticker": "AAD",
+        "e": 5,
+        "s": 6,
+        "g": 6
+    },
+    {
+        "name": "Charter Hall Retail REIT",
+        "id": 884383,
+        "exchange": "ASX",
+        "ticker": "CQR",
+        "e": 5,
+        "s": 5,
+        "g": 5
+    },
+    {
+        "name": "Billabong International Limited",
+        "id": 1061739,
+        "exchange": "ASX",
+        "ticker": "BBG",
+        "e": 5,
+        "s": 6,
+        "g": 6
+    },
+    {
+        "name": "ASX Limited",
+        "id": 1719233,
+        "exchange": "ASX",
+        "ticker": "ASX",
+        "e": 5,
+        "s": 6,
+        "g": 6
+    },
+    {
+        "name": "Broadspectrum Limited",
+        "id": 2964740,
+        "exchange": "ASX",
+        "ticker": "BRS",
+        "e": 6,
+        "s": 7,
+        "g": 5
+    },
+    {
+        "name": "APA Group",
+        "id": 3799924,
+        "exchange": "ASX",
+        "ticker": "APA",
+        "e": 5,
+        "s": 7,
+        "g": 6
+    },
+    {
+        "name": "Arrium Limited",
+        "id": 4038788,
+        "exchange": "ASX",
+        "ticker": "ARI",
+        "e": 6,
+        "s": 6,
+        "g": 5
+    },
+    {
+        "name": "Flight Centre Travel Group Limited",
+        "id": 4484222,
+        "exchange": "ASX",
+        "ticker": "FLT",
+        "e": 5,
+        "s": 6,
+        "g": 6
+    },
+    {
+        "name": "Fortescue Metals Group Ltd.",
+        "id": 4484407,
+        "exchange": "ASX",
+        "ticker": "FMG",
+        "e": 6,
+        "s": 6,
+        "g": 5
+    },
+    {
+        "name": "Gindalbie Metals Ltd.",
+        "id": 4484424,
+        "exchange": "ASX",
+        "ticker": "GBG",
+        "e": 6,
+        "s": 6,
+        "g": 5
+    },
+    {
+        "name": "Drillsearch Energy, Ltd.",
+        "id": 4492919,
+        "exchange": "ASX",
+        "ticker": "DLS",
+        "e": 5,
+        "s": 6,
+        "g": 6
+    },
+    {
+        "name": "BWP Trust",
+        "id": 4493422,
+        "exchange": "ASX",
+        "ticker": "BWP",
+        "e": 5,
+        "s": 5,
+        "g": 5
+    },
+    {
+        "name": "Cabcharge Australia Ltd.",
+        "id": 4493447,
+        "exchange": "ASX",
+        "ticker": "CAB",
+        "e": 6,
+        "s": 7,
+        "g": 5
+    },
+    {
+        "name": "AWE Limited",
+        "id": 4493468,
+        "exchange": "ASX",
+        "ticker": "AWE",
+        "e": 5,
+        "s": 6,
+        "g": 6
+    },
+    {
+        "name": "Breville Group Ltd",
+        "id": 4493503,
+        "exchange": "ASX",
+        "ticker": "BRG",
+        "e": 5,
+        "s": 6,
+        "g": 6
+    },
+    {
+        "name": "Challenger Limited",
+        "id": 4509051,
+        "exchange": "ASX",
+        "ticker": "CGF",
+        "e": 5,
+        "s": 6,
+        "g": 6
+    },
+    {
+        "name": "Ainsworth Game Technology Ltd.",
+        "id": 4509289,
+        "exchange": "ASX",
+        "ticker": "AGI",
+        "e": 5,
+        "s": 6,
+        "g": 6
+    },
+    {
+        "name": "GrainCorp. Ltd.",
+        "id": 4569972,
+        "exchange": "ASX",
+        "ticker": "GNC",
+        "e": 6,
+        "s": 6,
+        "g": 6
+    },
+    {
+        "name": "Commonwealth Property Office Fund",
+        "id": 4493390,
+        "e": 5,
+        "s": 5,
+        "g": 5
+    },
+    {
+        "name": "Bega Cheese Limited",
+        "id": 5440962,
+        "exchange": "ASX",
+        "ticker": "BGA",
+        "e": 6,
+        "s": 6,
+        "g": 6
+    },
+    {
+        "name": "BlueScope Steel Limited",
+        "id": 6125891,
+        "exchange": "ASX",
+        "ticker": "BSL",
+        "e": 6,
+        "s": 6,
+        "g": 5
+    },
+    {
+        "name": "Abacus Property Group",
+        "id": 7657684,
+        "exchange": "ASX",
+        "ticker": "ABP",
+        "e": 5,
+        "s": 5,
+        "g": 5
+    },
+    {
+        "name": "Evolution Mining Limited",
+        "id": 7713668,
+        "exchange": "ASX",
+        "ticker": "EVN",
+        "e": 6,
+        "s": 7,
+        "g": 6
+    },
+    {
+        "name": "Cardno Limited",
+        "id": 9560800,
+        "exchange": "ASX",
+        "ticker": "CDD",
+        "e": 5,
+        "s": 7,
+        "g": 6
+    },
+    {
+        "name": "CuDeco Ltd.",
+        "id": 6520943,
+        "e": 6,
+        "s": 6,
+        "g": 6
+    },
+    {
+        "name": "DUET Group",
+        "id": 10525123,
+        "exchange": "ASX",
+        "ticker": "DUE",
+        "e": 5,
+        "s": 7,
+        "g": 6
+    },
+    {
+        "name": "Discovery Metals Ltd.",
+        "id": 10636194,
+        "e": 6,
+        "s": 6,
+        "g": 6
+    },
+    {
+        "name": "Cromwell Property Group",
+        "id": 11234995,
+        "exchange": "ASX",
+        "ticker": "CMW",
+        "e": 5,
+        "s": 5,
+        "g": 5
+    },
+    {
+        "name": "Bradken Limited",
+        "id": 11365458,
+        "exchange": "ASX",
+        "ticker": "BKN",
+        "e": 6,
+        "s": 6,
+        "g": 5
+    },
+    {
+        "name": "Dexus Property Group",
+        "id": 12244417,
+        "exchange": "ASX",
+        "ticker": "DXS",
+        "e": 5,
+        "s": 5,
+        "g": 5
+    },
+    {
+        "name": "Atlas Iron Limited",
+        "id": 20333236,
+        "exchange": "ASX",
+        "ticker": "AGO",
+        "e": 6,
+        "s": 6,
+        "g": 5
+    },
+    {
+        "name": "Crown Resorts Limited",
+        "id": 20608200,
+        "exchange": "ASX",
+        "ticker": "CWN",
+        "e": 5,
+        "s": 6,
+        "g": 6
+    },
+    {
+        "name": "Domino's Pizza Enterprises Limited",
+        "id": 22275640,
+        "exchange": "ASX",
+        "ticker": "DMP",
+        "e": 5,
+        "s": 6,
+        "g": 6
+    },
+    {
+        "name": "Emeco Holdings Limited",
+        "id": 22277516,
+        "exchange": "ASX",
+        "ticker": "EHL",
+        "e": 6,
+        "s": 7,
+        "g": 5
+    },
+    {
+        "name": "Charter Hall Group",
+        "id": 22320693,
+        "exchange": "ASX",
+        "ticker": "CHC",
+        "e": 5,
+        "s": 5,
+        "g": 5
+    },
+    {
+        "name": "Automotive Holdings Group Limited",
+        "id": 23553609,
+        "exchange": "ASX",
+        "ticker": "AHG",
+        "e": 5,
+        "s": 6,
+        "g": 6
+    },
+    {
+        "name": "carsales.com Limited",
+        "id": 24404490,
+        "exchange": "ASX",
+        "ticker": "CAR",
+        "e": 5,
+        "s": 6,
+        "g": 5
+    },
+    {
+        "name": "AusNet Services",
+        "id": 24915054,
+        "exchange": "ASX",
+        "ticker": "AST",
+        "e": 5,
+        "s": 7,
+        "g": 6
+    },
+    {
+        "name": "BC Iron Limited",
+        "id": 30349210,
+        "exchange": "ASX",
+        "ticker": "BCI",
+        "e": 6,
+        "s": 6,
+        "g": 5
+    },
+    {
+        "name": "FlexiGroup Limited",
+        "id": 30537470,
+        "exchange": "ASX",
+        "ticker": "FXL",
+        "e": 5,
+        "s": 6,
+        "g": 6
+    },
+    {
+        "name": "Asciano Limited",
+        "id": 33984952,
+        "exchange": "ASX",
+        "ticker": "AIO",
+        "e": 6,
+        "s": 6,
+        "g": 6
+    },
+    {
+        "name": "Brambles Ltd.",
+        "id": 34536531,
+        "exchange": "ASX",
+        "ticker": "BXB",
+        "e": 6,
+        "s": 7,
+        "g": 5
+    },
+    {
+        "name": "Beadell Resources Ltd",
+        "id": 36340743,
+        "exchange": "ASX",
+        "ticker": "BDR",
+        "e": 6,
+        "s": 7,
+        "g": 6
+    },
+    {
+        "name": "Buru Energy Limited",
+        "id": 44006176,
+        "exchange": "ASX",
+        "ticker": "BRU",
+        "e": 5,
+        "s": 6,
+        "g": 6
+    },
+    {
+        "name": "Greencross Limited",
+        "id": 54654017,
+        "exchange": "ASX",
+        "ticker": "GXL",
+        "e": 6,
+        "s": 6,
+        "g": 5
+    },
+    {
+        "name": "G8 Education Limited",
+        "id": 64736883,
+        "exchange": "ASX",
+        "ticker": "GEM",
+        "e": 5,
+        "s": 6,
+        "g": 6
+    },
+    {
+        "name": "DuluxGroup Limited",
+        "id": 104866469,
+        "exchange": "ASX",
+        "ticker": "DLX",
+        "e": 6,
+        "s": 6,
+        "g": 6
+    },
+    {
+        "name": "Aurizon Holdings Limited",
+        "id": 114127724,
+        "exchange": "ASX",
+        "ticker": "AZJ",
+        "e": 6,
+        "s": 6,
+        "g": 6
+    },
+    {
+        "name": "Echo Entertainment Group Limited",
+        "id": 133308271,
+        "exchange": "ASX",
+        "ticker": "SGR",
+        "e": 5,
+        "s": 6,
+        "g": 6
+    },
+    {
+        "name": "Cover-More Group Limited",
+        "id": 252338717,
+        "exchange": "ASX",
+        "ticker": "CVO",
+        "e": 5,
+        "s": 6,
+        "g": 6
+    },
+    {
+        "name": "Genworth Mortgage Insurance Australia Limited",
+        "id": 262493228,
+        "exchange": "ASX",
+        "ticker": "GMA",
+        "e": 5,
+        "s": 5,
+        "g": 6
+    },
+    {
+        "name": "Asaleo Care Limited",
+        "id": 264985733,
+        "exchange": "ASX",
+        "ticker": "AHY",
+        "e": 7,
+        "s": 7,
+        "g": 6
+    }
+]
