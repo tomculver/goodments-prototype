@@ -42,10 +42,22 @@ var Forms = {
 		}
 		var profileLink = document.querySelector('a[rel="profile"]');
 		profileLink.href += queryString;
-		$.colorbox.close();
+		this.displaySuccessMessage();
+	},
+	displaySuccessMessage: function() {
+		$('.signup-form').hide();
+		$('.signup-success').show();
+		$.colorbox.resize();
+		var self = this;
+		setTimeout(function() {
+			self.displayProfile();
+		}, 1500);
+	},
+	displayProfile: function() {
 		$('body').removeClass('landing-home');
 		$('.landing').hide();
 		$('.start-profile').show();
+		$.colorbox.close();
 	}
 };
 Forms.init();
@@ -61,7 +73,7 @@ var Modals = {
 			inline: true,
 			href: '#signup',
 			width: '90%',
-			maxWidth: '425px'
+			maxWidth: '475px'
 		});
 
 	}

@@ -142,6 +142,17 @@ a {
         color: $background-color;
     }
  }
+ .btn-action {
+    &:after {
+        @extend .ss-icon;
+        @extend .ss-standard;
+        content: "Next";
+        display: inline-block;
+        margin-left: 0.5em;
+        vertical-align: middle;
+        font-size: $base-font-size;
+    }
+ }
  .btn-list {
     display: flex;
     justify-content: center;
@@ -265,6 +276,9 @@ a {
  */
 
 .modal-hidden {
+    display: none;
+}
+.signup-success {
     display: none;
 }
 

@@ -40,7 +40,7 @@ body-class: landing-home
       <h1 class="page-heading">Create your profile now and be ready for launch</h1>
     </section>
     <section class="cta">
-      <a href="https://ustwo.typeform.com/to/OEL7zw" class="btn" rel="profile">Create Profile</a>
+      <a href="https://ustwo.typeform.com/to/OEL7zw" class="btn btn-action" rel="profile">Create Profile</a>
     </section>
 
   </div>
@@ -48,15 +48,22 @@ body-class: landing-home
   <div class="modal-hidden">
 
     <section id="signup">
-      <img src="{{ "/images/icon_early-adopter.png" | prepend: site.baseurl }}" alt="Early Access">
-      <h2>Join the Beta</h2>
-      <p>Get early access, news and be part<br />of our testing community</p>
-      <div role="group">
-        <input type="email" id="email" placeholder="email address" required class="signup-input" />
-        <input type="submit" value="Join" class="signup-submit" />
-      </div>
+      <article class="signup-form">
+        <img src="{{ "/images/icon_early-adopter.png" | prepend: site.baseurl }}" alt="Early Access">
+        <h2>Join the Beta</h2>
+        <p>Get early access, news and be part<br />of our testing community</p>
+        <div role="group">
+          <input type="email" id="email" placeholder="email address" required class="signup-input" />
+          <input type="submit" value="Join" class="signup-submit" />
+        </div>
+      </article>
+      <article class="signup-success">
+        <img src="{{ "/images/icon_success.png" | prepend: site.baseurl }}" alt="Success">
+        <h2>Joined!</h2>
+        <br />
+      </article>
     </section>
-    section#
+
     
   </div>
 
