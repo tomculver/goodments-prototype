@@ -1,3 +1,9 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 /**
  * Intro
  */
@@ -28,16 +34,13 @@
 }
 
 
+
 /**
- * Home
+ * Wrapper
  */
- .home {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
- }
-
-
+.wrapper {
+    padding: 0;
+}
 
 /**
  * Header
@@ -52,7 +55,17 @@
 /**
  * Modals
  */
-
 .modal-inner {
   width: 50%;
+}
+
+
+
+/**
+ * Details page
+ */
+.detail {
+    .site-header {
+        position: relative;
+    }
 }

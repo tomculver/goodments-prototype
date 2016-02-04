@@ -15,7 +15,10 @@ var Forms = {
 		this.submit = document.querySelector('.signup-submit');
 
 		var self = this;
-		this.submit.addEventListener('click', self.validate.bind(self));
+		if (this.input && this.submit) {
+			this.submit.addEventListener('click', self.validate.bind(self));	
+		}
+
 	},
 	validate: function() {
 		if (!this.input.checkValidity()) {

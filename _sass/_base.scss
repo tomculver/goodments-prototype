@@ -13,7 +13,7 @@ dl, dd, ol, ul, figure {
 /**
  * Basic styling
  */
-body {
+html, body {
     font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
     color: $text-color;
     background-color: $background-color;
@@ -73,7 +73,9 @@ figcaption {
  * Lists
  */
 ul, ol {
-    margin-left: $spacing-unit;
+    margin: $spacing-unit 0;
+    padding: 0;
+    list-style-type: none;
 }
 
 li {
@@ -140,6 +142,16 @@ a {
         color: $background-color;
     }
  }
+ .btn-list {
+    display: flex;
+    justify-content: center;
+    li {
+        margin-right: $spacing-unit;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+ }
 
 
 
@@ -178,6 +190,9 @@ a {
     margin: 0 auto;
     padding: 0 $spacing-unit * 1.5;
     @extend %clearfix;
+    &.sm {
+        max-width: $content-width-sm;
+    }
 }
 
 
@@ -212,13 +227,20 @@ a {
     }
 }
 
+.start-profile {
+  display: none;
+}
+
 
 /**
  * Header
  */
+ .site-header {
+    background: transparent none center center / contain repeat;
+ }
 .site-name {
     display: block;
-    margin: $spacing-unit 0;
+    padding: $spacing-unit 0;
     text-transform: uppercase;
     &:hover {
         text-decoration: initial;
@@ -226,6 +248,15 @@ a {
     }
 }
 
+
+
+/**
+ * Sub-Header
+ */
+ .sub-header {
+    color: $brand-color;
+    font-size: $small-font-size;
+ }
 
 
 
@@ -236,85 +267,6 @@ a {
 .modal-hidden {
     display: none;
 }
-/*
-.modal-init .modal {
-  display: block;
-  position: fixed;
-  content: "";
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: -1;
-  opacity: 0;
-  transition: opacity 0.2s, z-index 0s 0.2s;
-  text-align: center;
-  overflow: hidden;
-  overflow-y: auto;
-  white-space: nowrap;
-  -webkit-overflow-scrolling: touch;
-}
-
-.modal-init .modal > * {
-  display: inline-block;
-  white-space: normal;
-}
-
-.modal-init .modal:before {
-  display: inline-block;
-  overflow: hidden;
-  width: 0;
-  height: 100%;
-  vertical-align: middle;
-  content: "";
-}
-
-.modal-init.modal-visible .modal {
-  z-index: 99;
-  opacity: 1;
-  transition: opacity 0.2s;
-}
-
-.modal-inner {
-  position: relative;
-  overflow: hidden;
-  width: 90%;
-  max-height: 90%;
-  overflow-x: hidden;
-  overflow-y: auto;
-  background: $brand-color;
-  border-radius: $border-radius;
-  padding: $spacing-unit;
-  text-align: center;
-  z-index: -1;
-  opacity: 0;
-  transform: scale(0);
-  transition: opacity 0.2s, transform 0.2s, z-index 0s 0.2s;
-}
-.modal-visible .modal-inner {
-  z-index: 100;
-  opacity: 1;
-  transform: scale(1);
-  transition: opacity 0.2s, transform 0.2s;
-}
-.modal-visible .modal-content {
-    img {
-        margin: $spacing-unit;
-    }
-}
-
-a[rel="modal:close"] {
-  position: absolute;
-  z-index: 2;
-  right: $spacing-unit;
-  top: $spacing-unit;
-  width: 16px; height: 16px;
-  background: transparent url('../images/icon_close.svg') center center / 100% auto no-repeat;
-  cursor: pointer;
-  color: transparent;
-}
-*/
 
 /*
     Colorbox Core Style:
@@ -397,7 +349,99 @@ div[role="group"] {
     }
 }
 
-.start-profile {
-  display: none;
+
+
+/**
+ * Social
+ */
+.share-buttons {
+    a {
+        color: $contrast-color;
+        padding: 0.5em 0.75em; 
+    }
+    a:before {
+        @extend .ss-icon;
+        display: inline-block;
+        margin-right: 0.5em;
+        line-height: 1;
+    }
+    a[rel="facebook"]:before {
+        content: "Facebook";
+        color: $facebook-blue;
+    }
+    a[rel="twitter"]:before {
+        content: "Twitter";
+        color: $twitter-blue;
+    }
+    a[rel="email"]:before {
+        content: "Email";
+    }
+}
+.follow-buttons {
+    a {
+        @extend .ss-icon;
+        border-radius: 50%;
+        font-size: $large-font-size;
+        width: 40px; height: 40px;
+        line-height: 40px;
+        padding: 0;
+    }
+    a[rel="facebook"] {
+        color: $facebook-blue;
+    }
+    a[rel="linkedin"] {
+        color: $linkedin-blue;
+    }
+    a[rel="twitter"] {
+        color: $twitter-blue;
+    }
 }
 
+
+/**
+ * Details page
+ */
+.detail {
+    .site-header {
+        background-image: url('../images/bg_header@2x.jpg');
+    }
+    .page-content {
+        display: flex;
+        flex-direction: column;
+    }
+    .profile-results {
+        flex: 1;
+    }
+}
+
+
+
+/**
+ * Profile
+ */
+ .profile {
+    display: flex;
+    align-items: center;
+    .profile-img {
+        margin-right: 1em;
+    }
+    .profile-email {
+        flex: 1;
+    }
+ }
+ .profile-results {
+    background-color: rgba($brand-color, 0.7);
+ }
+
+
+
+/**
+ * Scores list
+ */
+.scores-list {
+    margin: 0.5em 0;
+    text-align: center;
+    span {
+        display: block;
+    }
+}

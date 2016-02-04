@@ -1,14 +1,15 @@
 // Our variables
-$base-font-family: "geomanist-regular", Verdana, Geneva, sans-serif;
+$base-font-family:    "geomanist-regular", Verdana, Geneva, sans-serif;
 $heading-font-family: "geomanist-medium", Verdana, Geneva, sans-serif;
 $base-font-size:   14px;
 $base-font-weight: 400;
-$small-font-size:  $base-font-size * 0.875;
+$small-font-size:  $base-font-size * 0.714;
 $large-font-size:  $base-font-size * 1.285;
 $base-line-height: 1.5;
 $small-line-height: 1.2;
 
 $spacing-unit:     24px;
+$spacing-unit-sm:  $spacing-unit/2;
 $border-radius:    4px;
 
 $text-color:       #4D4D4D;
@@ -17,12 +18,17 @@ $brand-color:      #FFF;
 $highlight-color:  #3E61DF;
 $contrast-color:   #19074F;
 
+$facebook-blue:    #3E61DF;
+$linkedin-blue:    #187FB8;
+$twitter-blue:     #24A9E6;
+
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
 // Width of the content area
-$content-width:    #{1024px / $base-font-size}em;
+$content-width:    #{1024px / $base-font-size}rem;
+$content-width-sm: #{475px / $base-font-size}rem; 
 
 // Media queries
-$tablet: "screen and (min-width: 768px)";
+$tablet: "screen and (min-width: #{768px / $base-font-size}rem)";
