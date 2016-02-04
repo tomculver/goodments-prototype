@@ -28,19 +28,19 @@ body-class: detail
                 <img class="company-img" src="{{ "/images/companies/" | prepend: site.baseurl }}{{ company.ticker }}{{ ".png" }}"  alt="{{ company.ticker }}">
                 <div class="company-details">
                     <h3>{{ company.name }}</h3>
-                    <p>S&amp;P ASX 200: {{ company.ticker }} - </p>
+                    <p>S&amp;P ASX 200: {{ company.ticker }}</p>
                 </div>
                 <div class="company-cta">
                     <a href="" class="btn btn-reverse">Buy</a>
                 </div>
             </div>
             <div class="company-footer">
-                <p><span>85%</span> profile match</p>
+                <p class="company-match"><span>85%</span> profile match</p>
                 <ul class="scores-list">
                     <li rel="f"><span>5</span></li>
                     <li rel="e"><span>{{ company.e }}</span></li>
-                    <li rel="s"><span>{{ company.e }}</span></li>
-                    <li rel="g"><span>{{ company.e }}</span></li>
+                    <li rel="s"><span>{{ company.s }}</span></li>
+                    <li rel="g"><span>{{ company.g }}</span></li>
                 </ul>
             </div>
         </article>

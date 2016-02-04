@@ -515,6 +515,13 @@ div[role="group"] {
         flex: 1;
     }
  }
+ .company-match {
+    margin: 0 0 0 1em;
+    font-family: $heading-font-family;
+    span {
+        color: $highlight-color;
+    }
+ }
 
 
 
