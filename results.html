@@ -9,10 +9,10 @@ body-class: detail
         <img class="profile-img" src="{{ "/images/logo_profile-sm.png" | prepend: site.baseurl }}"  alt="Your profile">
         <span class="profile-email">name@company.com</span>
         <ul class="scores-list">
-            <li rel="f">Financial <span>5</span></li>
-            <li rel="e">Environment <span>3</span></li>
-            <li rel="s">Social <span>4</span></li>
-            <li rel="g">Governance <span>3</span></li>
+            <li rel="f">Financial <span>10</span></li>
+            <li rel="e">Environment <span>6</span></li>
+            <li rel="s">Social <span>8</span></li>
+            <li rel="g">Governance <span>6</span></li>
         </ul>
     </div>
 </section>
@@ -22,28 +22,30 @@ body-class: detail
         <br />
         <p><span>3</span> results ordered by closest match</p>
         <hr>
-        {% for company in site.data.companies %}
-        <article class="company">
-            <div class="company-main">
-                <img class="company-img" src="{{ "/images/companies/" | prepend: site.baseurl }}{{ company.ticker }}{{ ".png" }}"  alt="{{ company.ticker }}">
-                <div class="company-details">
-                    <h3>{{ company.name }}</h3>
-                    <p>S&amp;P ASX 200: {{ company.ticker }}</p>
+        <div class="companies-list">
+            {% for company in site.data.companies %}
+            <article class="company">
+                <div class="company-main">
+                    <img class="company-img" src="{{ "/images/companies/" | prepend: site.baseurl }}{{ company.ticker }}{{ ".png" }}"  alt="{{ company.ticker }}">
+                    <div class="company-details">
+                        <h3>{{ company.name }}</h3>
+                        <p>S&amp;P ASX 200: {{ company.ticker }}</p>
+                    </div>
+                    <div class="company-cta">
+                        <a href="" class="btn btn-reverse">Buy</a>
+                    </div>
                 </div>
-                <div class="company-cta">
-                    <a href="" class="btn btn-reverse">Buy</a>
+                <div class="company-footer">
+                    <p class="company-match"><span>85%</span> profile match</p>
+                    <ul class="scores-list">
+                        <li rel="f"><span>5</span></li>
+                        <li rel="e"><span>{{ company.e }}</span></li>
+                        <li rel="s"><span>{{ company.s }}</span></li>
+                        <li rel="g"><span>{{ company.g }}</span></li>
+                    </ul>
                 </div>
-            </div>
-            <div class="company-footer">
-                <p class="company-match"><span>85%</span> profile match</p>
-                <ul class="scores-list">
-                    <li rel="f"><span>5</span></li>
-                    <li rel="e"><span>{{ company.e }}</span></li>
-                    <li rel="s"><span>{{ company.s }}</span></li>
-                    <li rel="g"><span>{{ company.g }}</span></li>
-                </ul>
-            </div>
-        </article>
-        {% endfor %}
+            </article>
+            {% endfor %}
+        </div>
     </div>
 </section>
