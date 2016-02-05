@@ -480,6 +480,9 @@ div[role="group"] {
     box-shadow: 0 1px 1px 0 $border-color;
     border-radius: $border-radius;
     background-color: $brand-color;
+    &:nth-child(n+21) {
+        display: none;
+    }
  }
  .company-main {
     display: flex;
