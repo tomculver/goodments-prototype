@@ -131,7 +131,8 @@ var Sorting = {
 					company.diff += diff(company[prop], user[prop]);
 				}
 				companyElems[index].setAttribute('data-sortorder',company.diff);
-				companyElems[index].querySelector('.company-match span').textContent = ((40-company.diff)/40*100) + '%';
+				var percentMatch = ((40-company.diff)/40*100).toFixed(2) + '%';
+				companyElems[index].querySelector('.company-match span').textContent = percentMatch;
 			});
 
 			var $companiesList = $('.companies-list');
@@ -139,7 +140,7 @@ var Sorting = {
 			$(companyElems).sort(function(a, b) {
 				return a.dataset.sortorder - +b.dataset.sortorder;
 			}).appendTo($companiesList);
-
+			$companiesList.addClass('sorted');
 
 		};
 

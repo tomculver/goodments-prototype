@@ -189,20 +189,6 @@
         "g": 6
     },
     {
-        "name": "Australia Pacific Airports (Melbourne) Pty Limited",
-        "id": 22727840,
-        "e": 5,
-        "s": 7,
-        "g": 6
-    },
-    {
-        "name": "Australian Gas Networks Limited",
-        "id": 882780,
-        "e": 5,
-        "s": 8,
-        "g": 5
-    },
-    {
         "name": "Caltex Australia Ltd.",
         "id": 877088,
         "exchange": "ASX",
@@ -473,13 +459,6 @@
         "g": 7
     },
     {
-        "name": "Commonwealth Property Office Fund",
-        "id": 4493390,
-        "e": 6,
-        "s": 8,
-        "g": 7
-    },
-    {
         "name": "Bega Cheese Limited",
         "id": 5440962,
         "exchange": "ASX",
@@ -525,13 +504,6 @@
         "g": 5
     },
     {
-        "name": "CuDeco Ltd.",
-        "id": 6520943,
-        "e": 4,
-        "s": 7,
-        "g": 5
-    },
-    {
         "name": "DUET Group",
         "id": 10525123,
         "exchange": "ASX",
@@ -539,13 +511,6 @@
         "e": 6,
         "s": 7,
         "g": 8
-    },
-    {
-        "name": "Discovery Metals Ltd.",
-        "id": 10636194,
-        "e": 6,
-        "s": 7,
-        "g": 7
     },
     {
         "name": "Cromwell Property Group",
