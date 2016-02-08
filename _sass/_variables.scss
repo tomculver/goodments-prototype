@@ -37,4 +37,4 @@ $content-width:    #{1024px / $base-font-size}rem;
 $content-width-sm: #{475px / $base-font-size}rem; 
 
 // Media queries
-$tablet: "screen and (min-width: #{768px / $base-font-size}rem)";
+$tablet: "screen and (min-width: #{768px / $base-font-size}em)";

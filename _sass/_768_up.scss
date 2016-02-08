@@ -19,8 +19,11 @@ body {
  * Overview
  */
 .overview {
+    display: -ms-flexbox;
+    -ms-flex-direction: row;
     display: flex;
     article {
+        -ms-flex-basis: calc(100%/3);
     	flex-basis: calc(100%/3);
         display: block;
         margin: 0 $spacing-unit;
