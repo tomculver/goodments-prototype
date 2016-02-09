@@ -269,6 +269,7 @@ hr {
     display: block;
     padding: $spacing-unit 0;
     text-transform: uppercase;
+    text-decoration: none;
     &:hover {
         text-decoration: initial;
         color: $brand-color;

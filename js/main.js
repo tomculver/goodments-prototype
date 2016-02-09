@@ -40,6 +40,9 @@ var Forms = {
 		if (params && params[0].hasOwnProperty('results')) {
 			queryString += '&results=true';
 		}
+		if (document.referrer != '') {
+			queryString += '&referrer=' + document.referrer;
+		}
 		var profileLink = document.querySelector('a[rel="profile"]');
 		profileLink.href += queryString;
 		this.displaySuccessMessage();
