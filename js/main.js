@@ -87,6 +87,39 @@ Modals.init();
 
 
 /**
+ * Show results
+ */
+var Results = {
+	init: function() {
+
+		if ($('body').hasClass('thanks')) {
+
+			var params = window.location.search.length ? window.location.search.replace(/(^\?)/,'').split('&').map(function(i) {
+					var node = {};
+					node[i.split('=')[0]] = i.split('=')[1];
+					return node;
+				}) : null;
+
+			var showResults = false;
+			params.forEach(function(param) {
+				if (param.hasOwnProperty('results')) {
+					showResults = true;
+				}				
+			});
+
+			if (showResults) {
+				window.location.pathname = '/results/';
+			}
+
+		}
+
+	}
+};
+Results.init();
+
+
+
+/**
  * Modals
  */
 var Sorting = {

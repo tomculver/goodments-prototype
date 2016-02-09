@@ -264,8 +264,13 @@ hr {
  */
  .site-header {
     background: transparent none center center / contain repeat;
+    .wrapper {
+        display: flex;
+        width: 100%;
+    }
  }
 .site-name {
+    flex: 1;
     display: block;
     padding: $spacing-unit 0;
     text-transform: uppercase;
@@ -273,6 +278,15 @@ hr {
     &:hover {
         text-decoration: initial;
         color: $brand-color;
+    }
+}
+.site-social {
+    p {
+        color: $brand-color;
+        display: inline-block;
+    }
+    .follow-buttons {
+        float: right;
     }
 }
 

@@ -1,6 +1,7 @@
 ---
 layout: default
 permalink: /thanks/
+body-class: thanks
 ---
 
 <div class="wrapper">
@@ -16,10 +17,6 @@ permalink: /thanks/
     	<li><a href="" class="btn share-btn" rel="email">Email</a></li>
     </ul>
     <h3>and keep up-to-date</h3>
-    <ul class="follow-buttons btn-list">
-    	<li><a href="" class="btn follow-btn" rel="facebook">Facebook</a></li>
-    	<li><a href="" class="btn follow-btn" rel="linkedin">LinkedIn</a></li>
-    	<li><a href="" class="btn follow-btn" rel="twitter">Twitter</a></li>
-    </ul>
+    {% include follow.html %}
   </section>
 </div>
