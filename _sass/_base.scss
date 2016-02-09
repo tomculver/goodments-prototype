@@ -107,11 +107,9 @@ h1, h2 {
  */
 a {
     color: $brand-color;
-    text-decoration: none;
+    text-decoration: underline;
 
     &:hover {
-        color: $text-color;
-        text-decoration: underline;
     }
 }
 
@@ -137,6 +135,7 @@ hr {
     background-color: $brand-color;
     text-align: center;
     color: $background-color;
+    text-decoration: none;
     transition: all .2s ease;
     opacity: 1;
     transform: translate(0, 0);
