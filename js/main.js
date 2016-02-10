@@ -100,15 +100,17 @@ var Results = {
 					return node;
 				}) : null;
 
-			var showResults = false;
-			params.forEach(function(param) {
-				if (param.hasOwnProperty('results')) {
-					showResults = true;
-				}				
-			});
+			if (params) {
+				var showResults = false;
+				params.forEach(function(param) {
+					if (param.hasOwnProperty('results')) {
+						showResults = true;
+					}				
+				});
 
-			if (showResults) {
-				window.location.pathname = '/results/';
+				if (showResults) {
+					window.location.pathname = '/results/';
+				}
 			}
 
 		}
