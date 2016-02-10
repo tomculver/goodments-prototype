@@ -1,5 +1,5 @@
 <ul class="share-buttons btn-list">
 	<li><a href="https://www.facebook.com/dialog/share?display=popup&app_id={{ site.fb_app_id }}&href=http%3A//goodments.com/?utm_source=proto%26utm_medium=web%26utm_campaign=thanks&redirect_uri=http%3A//goodments.com/" target="_blank" class="btn share-btn" rel="facebook">Share</a></li>
 	<li><a href="https://twitter.com/intent/tweet?&text=Goodments%20-%20Make%20money%20and%20do%20good.&hashtags=goodments&via=goodments&url=http%3A%2F%2Fgoodments.com" target="_blank" class="btn share-btn" rel="twitter">Tweet</a></li>
-	<li><a href="" target="_blank" class="btn share-btn" rel="email">Email</a></li>
+	<li><a href="mailto:?subject={% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" target="_blank" class="btn share-btn" rel="email">Email</a></li>
 </ul>
