@@ -281,12 +281,25 @@ hr {
     }
 }
 .site-social {
+    display: none;
+    font-size: $small-font-size;
+    .landing-home & {
+        display: block;
+    }
     p {
-        color: $brand-color;
+        margin: 2.5em 1em 0;
         display: inline-block;
+        color: $brand-color;
     }
     .follow-buttons {
         float: right;
+        li {
+            margin-right: 1em;
+        }
+        a {
+            font-size: $base-font-size;
+            width: 30px; height: 30px;
+        }
     }
 }
 
@@ -415,33 +428,34 @@ div[role="group"] {
     }
     a[rel="facebook"]:before {
         content: "Facebook";
-        color: $facebook-blue;
+        color: $facebook-color;
     }
     a[rel="twitter"]:before {
         content: "Twitter";
-        color: $twitter-blue;
+        color: $twitter-color;
     }
     a[rel="email"]:before {
         content: "Email";
+        color: $text-color;
     }
 }
 .follow-buttons {
     a {
         @extend .ss-icon;
+        box-sizing: border-box;
         border-radius: 50%;
-        font-size: $large-font-size;
         width: 40px; height: 40px;
-        line-height: 40px;
-        padding: 0;
+        padding: 0.35em 0 0;
+        font-size: $large-font-size;
     }
     a[rel="facebook"] {
-        color: $facebook-blue;
+        color: $facebook-color;
     }
     a[rel="linkedin"] {
-        color: $linkedin-blue;
+        color: $linkedin-color;
     }
     a[rel="twitter"] {
-        color: $twitter-blue;
+        color: $twitter-color;
     }
 }
 
