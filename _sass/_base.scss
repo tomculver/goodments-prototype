@@ -309,6 +309,7 @@ hr {
  * Sub-Header
  */
  .sub-header {
+    background-color: $background-color;
     color: $brand-color;
     font-size: $small-font-size;
     .scores-list li span {
@@ -461,16 +462,27 @@ div[role="group"] {
 
 
 /**
- * Details page
+ * Results page
  */
-.detail {
+.results {
+    $headerHeight: #{78px / $base-font-size}rem;
     .site-header {
         background-image: url('../images/bg_header@2x.jpg');
+        height: $headerHeight;
+        position: fixed;
+        top: 0; left: 0; right: 0;
+        z-index: 100;
+    }
+    .sub-header {
+        position: fixed;
+        top: $headerHeight; left: 0; right: 0;
+        z-index: 100;
     }
     .page-content {
         display: flex;
         flex-direction: column;
         flex: 1;
+        padding-top: 120px;
     }
     .profile-results {
         flex: 1;

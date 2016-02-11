@@ -1,7 +1,7 @@
 ---
 layout: default
 permalink: /results/
-body-class: detail
+body-class: detail results
 ---
 
 <section class="sub-header">
@@ -24,6 +24,7 @@ body-class: detail
         <hr>
         <div class="companies-list">
             {% for company in site.data.companies %}
+            {% unless company.exclude == 'y' %}
             <article class="company">
                 <div class="company-main">
                     <img class="company-img" src="{{ "/images/companies/" | prepend: site.baseurl }}{{ company.ticker }}{{ ".png" }}"  alt="{{ company.ticker }}">
@@ -45,6 +46,7 @@ body-class: detail
                     </ul>
                 </div>
             </article>
+            {% endunless %}
             {% endfor %}
         </div>
     </div>
