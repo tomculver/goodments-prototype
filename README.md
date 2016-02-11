@@ -33,3 +33,4 @@ A quick-start guide to Jekyll and full documentation can be found at [Jekyllrb.c
 * Developer: [Petra Gulicher](mailto:petra@ustwo.com)
 * Designers: [Jack Maxwell](mailto:jack@ustwo.com), [Paz Rabbe](mailto:paz@ustwo.com)
 * Coach: [Kynan Hughes](mailto:kynan@ustwo.com)
+
