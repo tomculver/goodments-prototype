@@ -57,7 +57,8 @@
         "f": 2,
         "e": 6,
         "s": 5,
-        "g": 6
+        "g": 6,
+        "exclude": "y"
     },
     {
         "name": "Automotive Holdings Group Limited",
@@ -97,7 +98,8 @@
         "f": 4,
         "e": 4,
         "s": 7,
-        "g": 6
+        "g": 6,
+        "exclude": "y"
     },
     {
         "name": "ALS Limited",
@@ -207,7 +209,8 @@
         "f": 2,
         "e": 4,
         "s": 6,
-        "g": 5
+        "g": 5,
+        "exclude": "y"
     },
     {
         "name": "AusNet Services",
@@ -277,7 +280,8 @@
         "f": 6,
         "e": 5,
         "s": 6,
-        "g": 5
+        "g": 5,
+        "exclude": "y"
     },
     {
         "name": "Beadell Resources Ltd",
@@ -287,7 +291,8 @@
         "f": 4,
         "e": 5,
         "s": 5,
-        "g": 5
+        "g": 5,
+        "exclude": "y"
     },
     {
         "name": "Bendigo and Adelaide Bank Limited.",
@@ -357,7 +362,8 @@
         "f": 8,
         "e": 5,
         "s": 6,
-        "g": 7
+        "g": 7,
+        "exclude": "y"
     },
     {
         "name": "Breville Group Ltd",
@@ -587,7 +593,8 @@
         "f": 8,
         "e": 5,
         "s": 7,
-        "g": 6
+        "g": 6,
+        "exclude": "y"
     },
     {
         "name": "Drillsearch Energy, Ltd.",
@@ -597,7 +604,8 @@
         "f": 4,
         "e": 5,
         "s": 7,
-        "g": 6
+        "g": 6,
+        "exclude": "y"
     },
     {
         "name": "DuluxGroup Limited",
@@ -617,7 +625,8 @@
         "f": 4,
         "e": 4,
         "s": 7,
-        "g": 5
+        "g": 5,
+        "exclude": "y"
     },
     {
         "name": "Downer EDI Limited",
@@ -717,7 +726,8 @@
         "f": 2,
         "e": 7,
         "s": 7,
-        "g": 6
+        "g": 6,
+        "exclude": "y"
     },
     {
         "name": "Fairfax Media Limited",
@@ -747,7 +757,8 @@
         "f": 2,
         "e": 4,
         "s": 6,
-        "g": 5
+        "g": 5,
+        "exclude": "y"
     },
     {
         "name": "G8 Education Limited",

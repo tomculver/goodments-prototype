@@ -4,29 +4,9 @@
 (function(document) {
 
 /**
- * Forms
+ * Utilities
  */
-var Forms = {
-	init: function() {
-
-		$('.start-profile').hide();
-
-		this.input = document.querySelector('.signup-input');
-		this.submit = document.querySelector('.signup-submit');
-
-		var self = this;
-		if (this.input && this.submit) {
-			this.submit.addEventListener('click', self.validate.bind(self));	
-		}
-
-	},
-	validate: function() {
-		if (!this.input.checkValidity()) {
-			// Do error
-		} else {
-			this.submitForm();
-		}
-	},
+ var Utils = {
 	getParams: function() {
 		return params = window.location.search.length ? window.location.search.replace(/(^\?)/,'').split('&').map(function(i) {
 			var node = {};
@@ -34,134 +14,215 @@ var Forms = {
 			return node;
 		}) : null;
 	},
-	submitForm: function() {
-		var queryString = '?email=' + this.input.value;
-		var params = this.getParams();
-		if (params && params[0].hasOwnProperty('results')) {
-			queryString += '&results=true';
-		}
-		if (document.referrer != '') {
-			queryString += '&referrer=' + document.referrer;
-		}
-		var profileLink = document.querySelector('a[rel="profile"]');
-		profileLink.href += queryString;
-		this.displaySuccessMessage();
-	},
-	displaySuccessMessage: function() {
-		$('.signup-form').hide();
-		$('.signup-success').show();
-		$.colorbox.resize();
-		var self = this;
-		setTimeout(function() {
-			self.displayProfile();
-		}, 1500);
-	},
-	displayProfile: function() {
-		$('body').removeClass('landing-home');
-		$('.landing').hide();
-		$('.start-profile').show();
-		$.colorbox.close();
+	isPage: function(pageName) {
+		return $('body').hasClass(pageName);
 	}
-};
-Forms.init();
-
+ };
 
 
 /**
- * Modals
+ * Landing page
  */
-var Modals = {
+var Landing = {
+
 	init: function() {
 
-		$('a[rel="modal:open"]').colorbox({
-			inline: true,
-			href: '#signup',
-			width: '90%',
-			maxWidth: '475px'
-		});
+		if (Utils.isPage('landing')) {
+
+			var input = document.querySelector('.signup-input');
+			var submit = document.querySelector('.signup-submit');
+
+			hideProfile();
+			setupModal();
+
+			submit.addEventListener('click', validate);
+
+		}
+
+		function validate() {
+			if (!input.checkValidity()) {
+				// Do error
+			} else {
+				submitForm();
+			}
+		}
+
+		function submitForm() {
+			buildQueryString();
+			saveEmail();
+		}
+
+		function buildQueryString() {
+			var queryString = '?email=' + input.value;
+			var params = Utils.getParams();
+			if (params && params[0].hasOwnProperty('results')) {
+				queryString += '&results=true';
+			}
+			if (document.referrer != '') {
+				queryString += '&referrer=' + document.referrer;
+			}
+			var profileLink = document.querySelector('a[rel="profile"]');
+			profileLink.href += queryString;
+		}
+
+		function saveEmail() {
+			var $formGroup = $('div[role="group"]');
+			$formGroup.addClass('submitting');
+
+			var created_at = new Date();
+			$.post(
+				'https://sheetsu.com/apis/9439a7ef',
+				{ "email_address": input.value, "created_at": created_at },
+				function(msg) {
+					console.log('Success', msg);
+				}
+			).done(function(data) {
+				console.log('Done', data);
+				$formGroup.removeClass('submitting');
+				displaySuccessMessage();
+			}).fail(function(error) {
+				console.log('Error', error);
+				// Do error state
+			});
+		}
+
+		function displaySuccessMessage() {
+			$('.signup-form').hide();
+			$('.signup-success').show();
+			$.colorbox.resize();
+			setTimeout(function() {
+				displayProfile();
+			}, 1500);
+		}
+
+		function hideProfile() {
+			$('.start-profile').hide();
+		}
+
+		function displayProfile() {
+			$('body').removeClass('landing-home');
+			$('.landing-intro').hide();
+			$('.start-profile').show();
+			$.colorbox.close();
+		}
+
+		function setupModal() {
+			$('a[rel="modal:open"]').colorbox({
+				inline: true,
+				href: '#signup',
+				width: '90%',
+				maxWidth: '475px'
+			});
+		}
 
 	}
 };
-Modals.init();
+Landing.init();
 
 
 
 /**
- * Show results
+ * Displaying and sorting the list of companies on the results page
  */
 var Results = {
+
 	init: function() {
 
-		if ($('body').hasClass('thanks')) {
+		var params = Utils.getParams();
+		var profileEl = getProfileElem();
+		var companies = listCompanies();
 
-			var params = window.location.search.length ? window.location.search.replace(/(^\?)/,'').split('&').map(function(i) {
-					var node = {};
-					node[i.split('=')[0]] = i.split('=')[1];
-					return node;
-				}) : null;
+		if (Utils.isPage('thanks')) {
 
-			if (params) {
-				var showResults = false;
-				params.forEach(function(param) {
-					if (param.hasOwnProperty('results')) {
-						showResults = true;
-					}				
-				});
+			var showResults = false;
+			params.forEach(function(param) {
+				if (param.hasOwnProperty('results')) {
+					showResults = true;
+				}	
+			});
 
-				if (showResults) {
-					window.location.pathname = '/results/';
-				}
+			if (showResults) {
+				redirectToResultsPage();
 			}
 
+		} else if (Utils.isPage('results')) {
+			var user = createUserProfile();
+			// clearParams();
+			populateProfile(user);
+			sortCompanies(user);
 		}
 
-	}
-};
-Results.init();
+		function redirectToResultsPage() {
+			window.location.pathname = '/results/';
+		}
 
+		function listCompanies() {
+			return {{ site.data.companies | jsonify }}.filter(isNotExcluded);
+		}
 
+		function isNotExcluded(item) {
+			return !item.exclude;
+		}
+		function getProfileElem() {
+			return document.querySelector('.profile');
+		}
 
-/**
- * Modals
- */
-var Sorting = {
-	init: function() {
+		function createUserProfile() {
 
-		var companies = {{ site.data.companies | jsonify }};
+			// TODO: ONLY add F,E,S & G values to user object (otherwise profile matching is no bueno)
 
-		var params = window.location.search.length ? window.location.search.replace(/(^\?)/,'').split('&').map(function(i) {
-				var node = {};
-				node[i.split('=')[0]] = i.split('=')[1];
-				return node;
-			}) : null;
+			// params.map(function(param) {
+			// 	console.log(param[Object.keys(param)[0]]);
+			// 	var parsedValue = param[Object.keys(param)[0]].split('.')[0];
+			// 	var isLetter = (parsedValue == 'A' || 'B');
+			// 	console.log(param, isLetter);
+			// 	if (parsedValue == 'A' || 'B' || 'C' || 'D' || 'E') {
+			// 		console.log('value is a letter');
+			// 		param[Object.keys(param)[0]] = parsedValue.toLowerCase().charCodeAt(0);
+			// 	}
+			// 	console.log(param);
+			// });
 
-		var profileEl = document.querySelector('.profile');
-
-		var userObj = function() {
-			return params.reduce(function(obj, param) {
-				return Object.assign(obj, param);
+			var user = {};
+			var factors = ['f','e','s','g'];
+			// console.log(params);
+			var user = params.reduce(function(obj, param) {
+				var isFactor = factors.indexOf(Object.keys(param)[0]) > -1;
+				var parsedValue = parseValueFromRaw(param);
+				return isFactor ? Object.assign(obj, param) : obj;
 			});
+
+			return user;
+
 		};
 
-		var clearParams = function() {
+		function parseValueFromRaw(rawValue) {
+			var possibleValues = ['E','D','C','B','A']; // Where A = most important & E = least important
+			// console.log(rawValue);
+			var parsed = rawValue[Object.keys(rawValue)[0]].split('.')[0];
+			// console.log(parsed);
+			return parsed;
+		}
+
+		function clearParams() {
 			window.location.search = '';
-		};
+		}
 
-		var diff = function(a,b) {
-			var a = a || 5;
-			var b = b || 5;
+		function diff(a,b) {
+			var a = a || 1;
+			var b = b || 1;
 			return Math.abs(parseFloat(a)-parseFloat(b));
-		};
+		}
 
-		var populateProfile = function(user) {
+		function populateProfile(user) {
 			var elems = profileEl.querySelectorAll('li[rel]');
 			for (var i = 0; i < elems.length; i++) {
 				var factor = elems[i].getAttribute('rel');
 				elems[i].querySelector('span').textContent = user[factor];
 			};
-		};
+		}
 
-		var sortCompanies = function(user) {
+		function sortCompanies(user) {
 			var companyElems = document.querySelectorAll('.company');
 			companies.map(function(company, index) {
 				company.diff = 0;
@@ -180,23 +241,16 @@ var Sorting = {
 			}).appendTo($companiesList);
 			$companiesList.addClass('sorted');
 
-		};
+		}
 
-		var showLoader = function() {
-		};
+		function showLoader() {
+		}
 
-		var hideLoader = function() {
-		};
-
-		if (profileEl && params && companies) {
-			var user = userObj();
-			// clearParams();
-			populateProfile(user);
-			sortCompanies(user);
+		function hideLoader() {
 		}
 		
 	}
 };
-Sorting.init();
+Results.init();
 
 }(document));

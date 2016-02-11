@@ -26,7 +26,7 @@ html, body {
     font-feature-settings: "kern" 1;
     font-kerning: normal;
     min-height: 100vh;
-    &.landing-home {
+    &.landing {
         background-image: url('../images/bg@2x.jpg');
         background-size: cover;
     }
@@ -283,7 +283,7 @@ hr {
 .site-social {
     display: none;
     font-size: $small-font-size;
-    .landing-home & {
+    .landing & {
         display: block;
     }
     p {
@@ -391,10 +391,18 @@ div[role="group"] {
     border: 1px solid $highlight-color;
     border-radius: $border-radius;
     overflow: hidden;
+    transition: opacity .3s ease-in-out;
+    opacity: 1;
+    &.submitting {
+        opacity: 0.5;
+        input[type="email"] {
+            background: transparent url('../images/loader.gif') 95% 50% / auto 60% no-repeat;
+        }
+    }
     input[type="email"] {
         flex: 1;
         border: none;
-        padding: 0.5em 1em 0.55em;
+        padding: 0.5em 3em 0.55em 1em;
         &:focus {
             outline: none;
         }
