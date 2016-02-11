@@ -498,6 +498,8 @@ div[role="group"] {
     display: flex;
     align-items: center;
     .profile-img {
+        flex: 1;
+        max-width: 26px;
         margin-right: 1em;
     }
     .profile-email {
