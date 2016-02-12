@@ -47,7 +47,7 @@ var Landing = {
 
 		function trackSignupClick() {
 			console.log('tracking click');
-			ga('send', 'event', 'CTA', 'click', 'Sign up CTA');
+			ga('send', 'event', 'CTA', 'click', 'Landing page');
 		}
 
 		function validate() {
