@@ -8,16 +8,20 @@
  */
  var Utils = {
 	getParams: function() {
-		return params = window.location.search.length ? window.location.search.replace(/(^\?)/,'').split('&').map(function(i) {
+		var params = [];
+		document.location.search.replace(/(^\?)/,'').split("&").map(function(i) {
 			var node = {};
 			node[i.split('=')[0]] = i.split('=')[1];
-			return node;
-		}) : null;
+			params.push(node);
+			return true;
+		});
+		return params;
 	},
 	isPage: function(pageName) {
 		return $('body').hasClass(pageName);
 	}
  };
+
 
 
 /**
@@ -70,6 +74,7 @@ var Landing = {
 			$formGroup.addClass('submitting');
 
 			var created_at = new Date();
+
 			$.post(
 				'https://sheetsu.com/apis/9439a7ef',
 				{ "email_address": input.value, "created_at": created_at },
@@ -134,10 +139,10 @@ var Results = {
 
 		if (Utils.isPage('thanks')) {
 
-			var showResults = false;
+			var showResults = null;
 			params.forEach(function(param) {
 				if (param.hasOwnProperty('results')) {
-					showResults = true;
+					showResults = param['results'] === 'true' ? true : false;
 				}	
 			});
 
@@ -169,39 +174,26 @@ var Results = {
 
 		function createUserProfile() {
 
-			// TODO: ONLY add F,E,S & G values to user object (otherwise profile matching is no bueno)
-
-			// params.map(function(param) {
-			// 	console.log(param[Object.keys(param)[0]]);
-			// 	var parsedValue = param[Object.keys(param)[0]].split('.')[0];
-			// 	var isLetter = (parsedValue == 'A' || 'B');
-			// 	console.log(param, isLetter);
-			// 	if (parsedValue == 'A' || 'B' || 'C' || 'D' || 'E') {
-			// 		console.log('value is a letter');
-			// 		param[Object.keys(param)[0]] = parsedValue.toLowerCase().charCodeAt(0);
-			// 	}
-			// 	console.log(param);
-			// });
-
 			var user = {};
 			var factors = ['f','e','s','g'];
-			// console.log(params);
-			var user = params.reduce(function(obj, param) {
-				var isFactor = factors.indexOf(Object.keys(param)[0]) > -1;
-				var parsedValue = parseValueFromRaw(param);
-				return isFactor ? Object.assign(obj, param) : obj;
+
+			var parsedVals = params.map(function(param) {
+				var key = Object.keys(param)[0];
+				var val = param[key];
+				if (factors.indexOf(key) > -1) {
+					val = parsedValueFromRaw(val);
+					user[key] = val;
+				}
+				return param;
 			});
 
 			return user;
 
 		};
 
-		function parseValueFromRaw(rawValue) {
-			var possibleValues = ['E','D','C','B','A']; // Where A = most important & E = least important
-			// console.log(rawValue);
-			var parsed = rawValue[Object.keys(rawValue)[0]].split('.')[0];
-			// console.log(parsed);
-			return parsed;
+		function parsedValueFromRaw(rawValue) {
+			var scale = ['E','D','C','B','A']; // Where A = most important & E = least important
+			return (scale.indexOf(rawValue.split('.')[0]) + 1) *2;
 		}
 
 		function clearParams() {
