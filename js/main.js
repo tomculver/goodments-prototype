@@ -35,12 +35,19 @@ var Landing = {
 
 			var input = document.querySelector('.signup-input');
 			var submit = document.querySelector('.signup-submit');
+			var signup = document.querySelector('#signup');
 
 			hideProfile();
 			setupModal();
 
 			submit.addEventListener('click', validate);
+			signup.addEventListener('click', trackSignupClick);
 
+		}
+
+		function trackSignupClick() {
+			console.log('tracking click');
+			ga('send', 'event', 'CTA', 'click', 'Sign up CTA');
 		}
 
 		function validate() {
@@ -116,8 +123,15 @@ var Landing = {
 				inline: true,
 				href: '#signup',
 				width: '90%',
-				maxWidth: '475px'
+				maxWidth: '475px',
+				onOpen: function() {
+					trackSignupClick();
+				},
+				onComplete: function() {
+					input.focus();
+				}
 			});
+
 		}
 
 	}
