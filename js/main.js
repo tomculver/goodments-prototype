@@ -151,10 +151,12 @@ var Results = {
 			}
 
 		} else if (Utils.isPage('results')) {
+			showLoader();
 			var user = createUserProfile();
 			// clearParams();
 			populateProfile(user);
 			sortCompanies(user);
+			hideLoader();
 		}
 
 		function redirectToResultsPage() {
@@ -236,9 +238,14 @@ var Results = {
 		}
 
 		function showLoader() {
+			// $('body').addClass('loading');
 		}
 
 		function hideLoader() {
+			setTimeout(function() {
+				$('body').removeClass('loading');
+				$('.loader').remove();
+			}, 2000);
 		}
 		
 	}
