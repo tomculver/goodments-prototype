@@ -46,7 +46,6 @@ var Landing = {
 		}
 
 		function trackSignupClick() {
-			console.log('tracking click');
 			ga('send', 'event', 'CTA', 'click', 'Landing page');
 		}
 
@@ -92,6 +91,7 @@ var Landing = {
 				console.log('Done', data);
 				$formGroup.removeClass('submitting');
 				displaySuccessMessage();
+				ga('send', 'event', 'Sign up', 'complete', 'Sign up form');
 			}).fail(function(error) {
 				console.log('Error', error);
 				// Do error state
