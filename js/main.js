@@ -209,7 +209,7 @@ var Results = {
 
 		function parsedValueFromRaw(rawValue) {
 			var scale = ['E','D','C','B','A']; // Where A = most important & E = least important
-			return (scale.indexOf(rawValue.split('.')[0]) + 1) *2;
+			return (scale.indexOf(rawValue.split(')')[0]) + 1) *2;
 		}
 
 		function clearParams() {
