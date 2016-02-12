@@ -396,13 +396,14 @@ div[role="group"] {
     &.submitting {
         opacity: 0.5;
         input[type="email"] {
-            background: transparent url('../images/loader.gif') 95% 50% / auto 60% no-repeat;
+            background-position: 95% 50%;
         }
     }
     input[type="email"] {
         flex: 1;
         border: none;
         padding: 0.5em 3em 0.55em 1em;
+        background: transparent url('../images/loader.gif') 200% 50% / auto 60% no-repeat;
         &:focus {
             outline: none;
         }
