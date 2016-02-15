@@ -216,6 +216,7 @@ hr {
     max-width: $content-width;
     margin: 0 auto;
     padding: 0 $spacing-unit * 1.5;
+    box-sizing: border-box;
     @extend %clearfix;
     &.sm {
         max-width: $content-width-sm;
@@ -287,13 +288,11 @@ hr {
         display: block;
     }
     p {
-        margin: 2.5em 1em 0;
-        display: inline-block;
-        color: $brand-color;
+        display: none;
     }
     .follow-buttons {
         float: right;
-        li {
+        li:not(:last-child) {
             margin-right: 1em;
         }
         a {
